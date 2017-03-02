@@ -74,7 +74,7 @@ public class BookFacadeREST extends AbstractFacade<Book> {
     }
     
     @GET
-    @Path("date")
+    @Path("taken")
     @Produces({MediaType.APPLICATION_JSON})
     public List<Book> findByDateNull(){
         TypedQuery<Book> query = em.createNamedQuery("Book.findByDateNotNull", Book.class);
